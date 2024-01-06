@@ -1,6 +1,6 @@
 {
   "name": "@zhiweiliu/koordinates-linz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Client to access LINZ datasets hosted by Koordinates",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
