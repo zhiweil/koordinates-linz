@@ -1,4 +1,7 @@
 /node_modules/
+/datasets/
+api-key.ts
+test.png
 
 # test-related files
 /coverage.data
