@@ -1,4 +1,4 @@
-import { APIKind, KoordinatesDataset } from "./koordinates-dataset";
+import { APIKind, KoordinatesDataset } from "@zhiweiliu/koordinates-base";
 export let LinzHost: string = "https://data.linz.govt.nz";
 export let initialDatasetLocation: string =
   "https://s3.ap-southeast-2.amazonaws.com/linz-datasets.zhiweiliu.com";

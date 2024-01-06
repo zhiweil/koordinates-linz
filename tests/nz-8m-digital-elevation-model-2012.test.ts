@@ -1,4 +1,4 @@
-import { KoordinatesDataset } from "../src/koordinates-dataset";
+import { KoordinatesDataset } from "@zhiweiliu/koordinates-base";
 import { LinzDatasets } from "../src/index";
 import apiKey from "./api-key";
 import fs from "fs";
