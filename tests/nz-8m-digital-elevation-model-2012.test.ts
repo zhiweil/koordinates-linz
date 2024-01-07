@@ -10,7 +10,7 @@ test(
   "NZ 8m Digital Elevation Model (2012) capabilites endpoint",
   async () => {
     let nz8m: KoordinatesDataset = LinzDatasets.find(
-      (d) => d.name === "NZ 8m Digital Elevation Model (2012)"
+      (d) => d.getName() === "NZ 8m Digital Elevation Model (2012)"
     ) as KoordinatesDataset;
     expect(nz8m).not.toBe(undefined);
 
@@ -20,7 +20,7 @@ test(
     );
 
     let json = await nz8m.getLayerCapabilitiesJson(apiKey);
-    expect(json["Capabilities"]["$"]["version"]).toBe(nz8m.version);
+    expect(json["Capabilities"]["$"]["version"]).toBe(nz8m.getVesion());
 
     xml = await nz8m.getAllCapabilitiesXml(apiKey);
     expect(xml).toContain(
@@ -28,7 +28,7 @@ test(
     );
 
     json = await nz8m.getAllCapabilitiesJson(apiKey);
-    expect(json["Capabilities"]["$"]["version"]).toBe(nz8m.version);
+    expect(json["Capabilities"]["$"]["version"]).toBe(nz8m.getVesion());
 
     // CS-W endpoint
     xml = await nz8m.getWebCatalogServicesXml();
@@ -41,7 +41,7 @@ test(
   "NZ 8m Digital Elevation Model (2012) spatial data query endpoints",
   async () => {
     let nz8m: KoordinatesDataset = LinzDatasets.find(
-      (d) => d.name === "NZ 8m Digital Elevation Model (2012)"
+      (d) => d.getName() === "NZ 8m Digital Elevation Model (2012)"
     ) as KoordinatesDataset;
     expect(nz8m).not.toBe(undefined);
 
@@ -52,7 +52,7 @@ test(
     );
 
     expect(
-      spatialDataJson["rasterQuery"]["layers"][`${nz8m.layerId}`]
+      spatialDataJson["rasterQuery"]["layers"][`${nz8m.getLayerId()}`]
     ).toBeDefined();
   },
   TIMEOUT
@@ -62,7 +62,7 @@ test(
   "NZ 8m Digital Elevation Model (2012) XYZ tile service endpoint",
   async () => {
     let nz8m: KoordinatesDataset = LinzDatasets.find(
-      (d) => d.name === "NZ 8m Digital Elevation Model (2012)"
+      (d) => d.getName() === "NZ 8m Digital Elevation Model (2012)"
     ) as KoordinatesDataset;
     expect(nz8m).not.toBe(undefined);
 
