@@ -26,4 +26,15 @@ export let LinzDatasets = [
     initialDatasetLocation: "",
     initialDataset: "",
   }),
+  new KoordinatesDataset({
+    koordinatesHost: LinzHost,
+    name: "NZ Parcels",
+    layerId: 51571,
+    apiKind: APIKind.WFS,
+    apiVersion: "v1",
+    version: "v2.0.0",
+    initialDatasetTs: "2024-01-18T00:00:00Z",
+    initialDatasetLocation,
+    initialDataset: "nz-parcels.csv",
+  }),
 ];
