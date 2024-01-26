@@ -14,6 +14,7 @@ export let LinzDatasets = [
     initialDatasetTs: "2023-12-20T00:00:00Z",
     initialDatasetLocation,
     initialDataset: "nz-addresses.csv",
+    hasChangesets: true,
   }),
   new KoordinatesDataset({
     koordinatesHost: LinzHost,
@@ -36,5 +37,6 @@ export let LinzDatasets = [
     initialDatasetTs: "2024-01-18T00:00:00Z",
     initialDatasetLocation,
     initialDataset: "nz-parcels.csv",
+    hasChangesets: true,
   }),
 ];

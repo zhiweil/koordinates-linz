@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/zhiweil/koordinates-linz#readme",
   "dependencies": {
-    "@zhiweiliu/koordinates-base": "^1.0.4"
+    "@zhiweiliu/koordinates-base": "^1.0.6"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
